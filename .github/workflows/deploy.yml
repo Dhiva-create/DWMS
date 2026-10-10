@@ -1,4 +1,4 @@
-name: Deploy Vite to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: 'pages'
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -21,15 +21,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install dependencies
-        run: npm install --force
+        run: npm install --legacy-peer-deps
 
-      - name: Build project
+      - name: Build
         run: npm run build
 
       - name: Upload artifact
