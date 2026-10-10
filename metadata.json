@@ -1,0 +1,6 @@
+{
+  "name": "Kauvery Hospital - Daily Work Management (DWM) Billing System",
+  "description": "Hospital billing daily work management platform featuring interactive organograms, dynamic role sheets, statistical process control (SPC) charts with target/UCL/LCL lines, and a draggable KPI tree.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
